@@ -17,6 +17,14 @@ Order.prototype.addPizza = function(pizza) {
 	this.pizzas.push(pizza);
 }
 
+Order.prototype.total = function(){
+	var total = 0.0;
+	this.pizzas.forEach(function(pizza){
+		total += pizza.price();
+	});
+	return total.toFixed(2);
+}
+
 Pizza.prototype.setToppings = function(toppings) {
 	this.toppings = toppings
 }
@@ -32,5 +40,5 @@ Pizza.prototype.price = function(){
 		total += topping.price;
 	});
 	total = total * sizeChart[this.pizzaSize];
-	return total.toFixed(2);
+	return total;
 }
