@@ -2,11 +2,15 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<script src="js/scripts.js"></script>
 	<script src="js/jquery.js"></script>
 	<title>Pizza Company</title>
 </head>
 <body>
+	<header>
+	<h1>Life of Slice</h1>
+	</header>
 	<div class="container">
 		<form id="order">
 			<div class="form-group">
@@ -16,7 +20,7 @@
 			<div class="create-pizza-container">
 				<div class="create-pizza" data-clone="0">
 					<div class="form-group">
-						<h3>Create a new pizza</h3>
+						<h3>Create a pizza</h3>
 						<label for="size">Select a size</label>
 						<select id="size" name="size">
 							<option value="small">small</option>
@@ -25,15 +29,48 @@
 						</select>
 					</div>
 					<div id="order-ingredients" class="form-group">
+						<h5>select ingredients:</h5>
 						<div class="checkbox">
-							<input type="checkbox" name="topping" value="mozzerella" data-price="2.00">mozzerella
-							<input type="checkbox" name="topping" value="pepperoni" data-price="2.50">pepperoni
+							<h6>Cheese:</h6>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="mozzerella" data-price="1.00">Mozzerella
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="parmesan" data-price="0.50">Parmesan
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Herbs and Cheese
+							</label>
+						</div>
+						<div class="checkbox">
+							<h6>Meat:</h6>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="mozzerella" data-price="2.00">Pepperoni
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="parmesan" data-price="2.50">Beef
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Chicken
+							</label>
+						</div>
+						<div class="checkbox">
+							<h6>Veggies:</h6>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="mozzerella" data-price="2.00">Bell Peppers
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="parmesan" data-price="2.50">Onions
+							</label>
+							<label class="checkbox-inline">
+								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Pineapples
+							</label>
 						</div>
 					</div>
 				</div>
 			</div>
+			<button id="addPizza">Add another pizza</button>
 			<button type="submit">order</button>
-			<button id="addPizza">Add a pizza</button>
 		</form>
 	</div>
 	<div>
