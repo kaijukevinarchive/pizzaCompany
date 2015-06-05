@@ -9,10 +9,12 @@
 <body>
 	<div class="container">
 		<form id="order">
-			<button type="submit">order</button>
-			<button id="addPizza">Add a pizza</button>
+			<div class="form-group">
+				<label for="name">Name for the order:</label>
+				<input id="name" name="name" type="text">
+			</div>
 			<div class="create-pizza-container">
-				<div class="create-pizza">
+				<div class="create-pizza" data-clone="0">
 					<div class="form-group">
 						<h3>Create a new pizza</h3>
 						<label for="size">Select a size</label>
@@ -30,6 +32,8 @@
 					</div>
 				</div>
 			</div>
+			<button type="submit">order</button>
+			<button id="addPizza">Add a pizza</button>
 		</form>
 	</div>
 	<div>
