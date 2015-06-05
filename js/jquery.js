@@ -6,7 +6,7 @@ $(function() {
 		var checkedToppings = $("input[type='checkbox'][name='topping']:checked");
 		var myToppings = [];
 		checkedToppings.each(function() {
-			myToppings.push( new Topping($(this).val(), $(this).data("price")) )
+			myToppings.push( new Topping($(this).val(), parseFloat($(this).data("price"))) )
 		})
 		debugger
 		var newPizza = new Pizza(pizzaSize);
