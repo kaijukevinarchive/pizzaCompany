@@ -1,7 +1,8 @@
-function Order(name) {
-	this.name = name;
+function Order(orderName) {
+	this.orderName = orderName;
 }
 
-function Pizza(size) {
-	this.size = size;	
+function Pizza(pizzaSize) {
+	this.pizzaSize = pizzaSize;
+	this.toppings = [];
 }
