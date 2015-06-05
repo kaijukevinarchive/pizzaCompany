@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="js/scripts.js"></script>
 	<script src="js/jquery.js"></script>
 	<title>Pizza Company</title>
 </head>
 <body>
 	<header>
-	<h1>Pizza Company</h1>
+		<h1>Pizza Company</h1>
 	</header>
 	<div class="container">
+		<div>
+			<p>
+				Thank you for choosing The Pizza Company, home of the 
+				fully customizable pizza. Please select the ingredients 
+				for your pizza below. If you would like to order multiple 
+				pizzas, please click the "Add another pizza" button. Once 
+				you have your pizzas ready, click "Order."
+			</p>
+		</div>
 		<form id="order">
 			<div class="form-group">
 				<label for="name">Name for the order:</label>
-				<input id="name" name="name" type="text">
+				<input id="name" name="name" type="text" class="form-control">
 			</div>
 			<div class="create-pizza-container">
 				<div class="create-pizza" data-clone="0">
 					<div class="form-group">
 						<h3>Create a pizza</h3>
 						<label for="size">Select a size</label>
-						<select id="size" name="size">
+						<select id="size" name="size" class="form-control">
 							<option value="small">small</option>
 							<option value="medium">medium</option>
 							<option value="large">large</option>
@@ -33,37 +44,37 @@
 						<div class="checkbox">
 							<h6>Cheese:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="mozzerella" data-price="1.00">Mozzerella
+								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="1.00">Mozzerella
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="parmesan" data-price="0.50">Parmesan
+								<input type="checkbox" name="topping"  data-name="parmesan" data-price="0.50">Parmesan
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Herbs and Cheese
+								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Herbs and Cheese
 							</label>
 						</div>
 						<div class="checkbox">
 							<h6>Meat:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="mozzerella" data-price="2.00">Pepperoni
+								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="2.00">Pepperoni
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="parmesan" data-price="2.50">Beef
+								<input type="checkbox" name="topping"  data-name="parmesan" data-price="2.50">Beef
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Chicken
+								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Chicken
 							</label>
 						</div>
 						<div class="checkbox">
 							<h6>Veggies:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="mozzerella" data-price="2.00">Bell Peppers
+								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="2.00">Bell Peppers
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="parmesan" data-price="2.50">Onions
+								<input type="checkbox" name="topping"  data-name="parmesan" data-price="2.50">Onions
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping" data-name="herb n cheese" data-price="1.50">Pineapples
+								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Pineapples
 							</label>
 						</div>
 					</div>
