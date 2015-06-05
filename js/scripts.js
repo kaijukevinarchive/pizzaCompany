@@ -15,3 +15,16 @@ function Topping(toppingName, price) {
 Pizza.prototype.setToppings = function(toppings) {
 	this.toppings = toppings
 }
+
+Pizza.prototype.price = function(){
+	var sizeChart = {
+		"large": 3.0,
+		"medium": 2.0,
+		"small": 1.0
+	};
+	var total = 0;
+	this.toppings.forEach(function(topping) {
+		total += topping.price;
+	})
+	return total * sizeChart[this.pizzaSize];
+}

@@ -20,6 +20,14 @@ describe("Pizza", function() {
 		expect(myPizza.toppings).to.eql(myToppings);
 	});
 
+	it("will return the price of the pizza", function() {
+		var myPizza = new Pizza("large");
+		var mozzerella = new Topping("mozzerella", 2.00);
+		var pepperoni = new Topping("pepperoni", 3.00);
+		var myToppings = [mozzerella, pepperoni]
+		myPizza.setToppings(myToppings);
+		expect(myPizza.price()).to.equal(15.00)
+	});
 });
 
 describe("Topping", function() {
