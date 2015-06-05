@@ -24,6 +24,15 @@ $(function() {
 
 		var $createPizzaClone = $(".create-pizza").last().clone();
 		$createPizzaClone.find("input[type='checkbox']").prop("checked", false);
+
+		$createPizzaClone.find(".removePizza").show();
+
+		$createPizzaClone.find(".removePizza").on("click", function(event) {
+			event.preventDefault();
+
+			$(this).parent(".create-pizza").remove();
+		});
+		
 		$createPizzaClone.appendTo(".create-pizza-container");
 	});
 })
