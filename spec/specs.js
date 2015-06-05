@@ -33,7 +33,7 @@ describe("Pizza", function() {
 describe("Topping", function() {
 	it("will create a topping with a name and price", function() {
 		var mozzerella = new Topping("mozzerella", 1.00);
-		expect(mozzerella.toppingName).to.equal("mozzerella");
+		expect(mozzerella.ingredient).to.equal("mozzerella");
 		expect(mozzerella.price).to.equal(1.00);
-	})
-})
+	});
+});

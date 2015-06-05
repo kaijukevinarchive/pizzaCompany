@@ -7,8 +7,8 @@ function Pizza(pizzaSize) {
 	this.toppings = [];
 }
 
-function Topping(toppingName, price) {
-	this.toppingName = toppingName;
+function Topping(ingredient, price) {
+	this.ingredient = ingredient;
 	this.price = price;
 }
 
@@ -25,6 +25,6 @@ Pizza.prototype.price = function(){
 	var total = 0;
 	this.toppings.forEach(function(topping) {
 		total += topping.price;
-	})
+	});
 	return total * sizeChart[this.pizzaSize];
 }
