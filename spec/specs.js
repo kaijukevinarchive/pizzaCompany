@@ -3,6 +3,14 @@ describe("Order", function() {
 		var orderUp = new Order("Kevin");
 		expect(orderUp.orderName).to.equal("Kevin");
 	});
+
+	it("will hold multiple pizzas", function() {
+		var myOrder = new Order("Kevin");
+		myOrder.addPizza( new Pizza("large") );
+		myOrder.addPizza( new Pizza("medium") );
+		myOrder.addPizza( new Pizza("small") );
+		expect(myOrder.pizzas.length).to.equal(3);
+	})
 });
 
 describe("Pizza", function() {
