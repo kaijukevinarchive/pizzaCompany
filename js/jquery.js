@@ -12,5 +12,10 @@ $(function() {
 		var newPizza = new Pizza(pizzaSize);
 		newPizza.setToppings(myToppings);
 		$("p#total").text(newPizza.price().toString());
+	});
+
+	$("button#addPizza").on("click", function(event) {
+		event.preventDefault();
+		$(".create-pizza").last().clone().appendTo(".create-pizza-container");
 	})
 })
