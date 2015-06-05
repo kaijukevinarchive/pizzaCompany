@@ -10,4 +10,11 @@ describe("Pizza", function() {
 		var myPizza = new Pizza("large");
 		expect(myPizza.pizzaSize).to.equal("large");
 	});
+
+	it("will add toppings to a pizza", function() {
+		var myPizza = new Pizza("large");
+		var toppings = ["mozzerella", "ham", "onions"];
+		myPizza.addToppings(toppings);
+		expect(myPizza.toppings).to.eql(toppings)
+	});
 });
