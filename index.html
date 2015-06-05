@@ -26,66 +26,68 @@
 		<form id="order">
 			<div class="form-group">
 				<label for="name">Name for the order:</label>
-				<input id="name" name="name" type="text" class="form-control">
+				<input id="name" name="name" type="text" class="form-control" required>
 			</div>
 			<div class="create-pizza-container">
 				<div class="create-pizza" data-clone="0">
 					<div class="form-group">
-						<h3>Create a pizza</h3>
-						<label for="size">Select a size</label>
-						<select id="size" name="size" class="form-control">
+						<h3>Create a pizza<h3>
+						<select id="size" name="size" class="form-control" required>
+							<option value="">Select a size</option>
 							<option value="small">small</option>
 							<option value="medium">medium</option>
 							<option value="large">large</option>
 						</select>
 					</div>
-					<div id="order-ingredients" class="form-group">
+					<div class="ingredients" class="form-group">
 						<h5>select ingredients:</h5>
 						<div class="checkbox">
 							<h6>Cheese:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="1.00">Mozzerella
+								<input type="checkbox" name="topping"  data-name="Mozzerella" data-price="1.00">Mozzerella
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="parmesan" data-price="0.50">Parmesan
+								<input type="checkbox" name="topping"  data-name="Parmesan" data-price="0.50">Parmesan
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Herbs and Cheese
+								<input type="checkbox" name="topping"  data-name="Herbs and Cheese" data-price="1.50">Herbs and Cheese
 							</label>
 						</div>
 						<div class="checkbox">
 							<h6>Meat:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="2.00">Pepperoni
+								<input type="checkbox" name="topping"  data-name="Pepperoni" data-price="2.00">Pepperoni
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="parmesan" data-price="2.50">Beef
+								<input type="checkbox" name="topping"  data-name="Beef" data-price="2.50">Beef
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Chicken
+								<input type="checkbox" name="topping"  data-name="Chicken" data-price="1.50">Chicken
 							</label>
 						</div>
 						<div class="checkbox">
 							<h6>Veggies:</h6>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="mozzerella" data-price="2.00">Bell Peppers
+								<input type="checkbox" name="topping"  data-name="Bell Peppers" data-price="2.00">Bell Peppers
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="parmesan" data-price="2.50">Onions
+								<input type="checkbox" name="topping"  data-name="Onions" data-price="2.50">Onions
 							</label>
 							<label class="checkbox-inline">
-								<input type="checkbox" name="topping"  data-name="herb n cheese" data-price="1.50">Pineapples
+								<input type="checkbox" name="topping"  data-name="Pineapples" data-price="1.50">Pineapples
 							</label>
 						</div>
 					</div>
-					<div class="removePizza" style="display: none;">Remove Pizza</div>
+					<div class="btn-remove-pizza">Remove Pizza</div>
 				</div>
 			</div>
-			<button id="addPizza">Add another pizza</button>
-			<button type="submit">order</button>
+			<button id="btn-add-pizza">Add another pizza</button>
+			<button id="btn-order" type="submit">order</button>
 		</form>
-		<div>
-		<p id="total"></p>
+		<div id="receipt">
+			<h3>Order for: <span id="order-name"></span></h3>
+			<div class="pizza-orders"></div>
+			<p>Total: <span id="total"></p>
 		</div>
 	</div>
 </body>
