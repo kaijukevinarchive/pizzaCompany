@@ -52,6 +52,7 @@ header h1 {
 
 .pizza {
 	display: inline-block;
+	vertical-align: top;
 	margin: 1em 4em;
 }
 
