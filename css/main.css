@@ -43,15 +43,6 @@ header h1 {
 
 .btn-remove-pizza {
 	display: none;
-	padding: 0.3em 0.5em;
-	background: #990000;
-	color: #fff;
-	cursor: pointer;
-	border: 1px solid #777;
-}
-
-.btn-remove-pizza:hover {
-	background: #880000;
 }
 
 #receipt {
