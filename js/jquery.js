@@ -6,12 +6,14 @@ $(function() {
 
 		$(".create-pizza").each(function(){
 			var pizzaSize = $("select#size").val();
+			var newPizza = new Pizza(pizzaSize);
 			var checkedToppings = $(this).find("input[type='checkbox'][name='topping']:checked");
 			var myToppings = [];
+
 			checkedToppings.each(function() {
 				myToppings.push( new Topping( $(this).data("name"), parseFloat($(this).data("price"))) )
 			});
-			var newPizza = new Pizza(pizzaSize);
+			
 			newPizza.setToppings(myToppings);
 			order.addPizza(newPizza);
 		});
@@ -24,12 +26,9 @@ $(function() {
 
 		var $createPizzaClone = $(".create-pizza").last().clone();
 		$createPizzaClone.find("input[type='checkbox']").prop("checked", false);
-
 		$createPizzaClone.find(".removePizza").show();
 
-		$createPizzaClone.find(".removePizza").on("click", function(event) {
-			event.preventDefault();
-
+		$createPizzaClone.find(".removePizza").on("click", function() {
 			$(this).parent(".create-pizza").remove();
 		});
 		
