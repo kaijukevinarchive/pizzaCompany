@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
+	<script src="js/jquery.js"></script>
+	<title>Pizza Company</title>
+</head>
+<body>
+	<div class="container">
+		<form id="order">
+			<div class="form-group">
+				<h1>Create a pizza</h1>
+				<label for="size">Select a size</label>
+				<select id="size" name="size">
+					<option value="small">small</option>
+					<option value="medium">medium</option>
+					<option value="large">large</option>
+				</select>
+			</div>
+			<div id="order-ingredients" class="form-group">
+				<div class="checkbox">
+					<input type="checkbox" name="topping" value="mozzerella" data-price="2.00">mozzerella
+					<input type="checkbox" name="topping" value="pepperoni" data-price="2.00">pepperoni
+				</div>
+			</div>
+			<button type="submit">order</button>
+		</form>
+	</div>
+	<div>
+	<p id="total"></p>
+	</div>
+</body>
+</html>

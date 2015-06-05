@@ -22,9 +22,11 @@ Pizza.prototype.price = function(){
 		"medium": 2.0,
 		"small": 1.0
 	};
-	var total = 0;
+	var total = 0.0;
 	this.toppings.forEach(function(topping) {
 		total += topping.price;
 	});
-	return total * sizeChart[this.pizzaSize];
+	console.log(total * sizeChart[this.pizzaSize])
+	total = total * sizeChart[this.pizzaSize];
+	return total;
 }
