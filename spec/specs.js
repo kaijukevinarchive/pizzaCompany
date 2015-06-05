@@ -13,8 +13,19 @@ describe("Pizza", function() {
 
 	it("will add toppings to a pizza", function() {
 		var myPizza = new Pizza("large");
-		var toppings = ["mozzerella", "ham", "onions"];
-		myPizza.addToppings(toppings);
-		expect(myPizza.toppings).to.eql(toppings)
+		var mozzerella = new Topping("mozzerella", 1.00);
+		var pepperoni = new Topping("pepperoni", 2.50);
+		var myToppings = [mozzerella, pepperoni]
+		myPizza.setToppings(myToppings);
+		expect(myPizza.toppings).to.eql(myToppings);
 	});
+
 });
+
+describe("Topping", function() {
+	it("will create a topping with a name and price", function() {
+		var mozzerella = new Topping("mozzerella", 1.00);
+		expect(mozzerella.toppingName).to.equal("mozzerella");
+		expect(mozzerella.price).to.equal(1.00);
+	})
+})

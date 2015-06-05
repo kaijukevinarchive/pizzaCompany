@@ -7,6 +7,11 @@ function Pizza(pizzaSize) {
 	this.toppings = [];
 }
 
-Pizza.prototype.addToppings = function(toppingsArray) {
-	this.toppings = toppingsArray;
+function Topping(toppingName, price) {
+	this.toppingName = toppingName;
+	this.price = price;
+}
+
+Pizza.prototype.setToppings = function(toppings) {
+	this.toppings = toppings
 }
