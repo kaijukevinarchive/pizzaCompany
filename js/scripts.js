@@ -31,11 +31,11 @@ Pizza.prototype.setToppings = function(toppings) {
 
 Pizza.prototype.price = function(){
 	var sizeChart = {
-		"large": 3.0,
-		"medium": 2.0,
+		"large": 1.8,
+		"medium": 1.5,
 		"small": 1.0
 	};
-	var total = 1.0;
+	var total = 5.0;
 	this.toppings.forEach(function(topping) {
 		total += topping.price;
 	});

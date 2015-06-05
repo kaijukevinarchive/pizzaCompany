@@ -34,7 +34,7 @@ describe("Pizza", function() {
 		var pepperoni = new Topping("pepperoni", 3.00);
 		var myToppings = [mozzerella, pepperoni]
 		myPizza.setToppings(myToppings);
-		expect(myPizza.price()).to.equal(18.00)
+		expect(myPizza.price()).to.equal(18.00);
 	});
 });
 
