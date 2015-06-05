@@ -25,8 +25,8 @@ Order.prototype.total = function(){
 	return total.toFixed(2);
 }
 
-Pizza.prototype.setToppings = function(toppings) {
-	this.toppings = toppings
+Pizza.prototype.setToppings = function(topping) {
+	this.toppings.push(topping)
 }
 
 Pizza.prototype.price = function(){

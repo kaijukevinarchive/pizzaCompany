@@ -23,17 +23,17 @@ describe("Pizza", function() {
 		var myPizza = new Pizza("large");
 		var mozzerella = new Topping("mozzerella", 1.00);
 		var pepperoni = new Topping("pepperoni", 2.50);
-		var myToppings = [mozzerella, pepperoni]
-		myPizza.setToppings(myToppings);
-		expect(myPizza.toppings).to.eql(myToppings);
+		myPizza.setToppings(mozzerella);
+		myPizza.setToppings(pepperoni);
+		expect(myPizza.toppings.length).to.eql(2);
 	});
 
 	it("will return the price of the pizza", function() {
 		var myPizza = new Pizza("large");
 		var mozzerella = new Topping("mozzerella", 2.00);
 		var pepperoni = new Topping("pepperoni", 3.00);
-		var myToppings = [mozzerella, pepperoni]
-		myPizza.setToppings(myToppings);
+		myPizza.setToppings(mozzerella);
+		myPizza.setToppings(pepperoni);
 		expect(myPizza.price()).to.equal(18.00);
 	});
 });

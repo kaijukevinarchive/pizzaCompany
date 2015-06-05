@@ -7,15 +7,13 @@ $(function() {
 		$(".create-pizza").each(function(){
 			var pizzaSize = $("select#size").val();
 			var newPizza = new Pizza(pizzaSize);
-			
+
 			var checkedToppings = $(this).find("input[type='checkbox'][name='topping']:checked");
-			var myToppings = [];
 
 			checkedToppings.each(function() {
-				myToppings.push( new Topping( $(this).data("name"), parseFloat($(this).data("price"))) );
+				newPizza.setToppings( new Topping( $(this).data("name"), parseFloat($(this).data("price"))) );
 			});
 			
-			newPizza.setToppings(myToppings);
 			order.addPizza(newPizza);
 		});
 
